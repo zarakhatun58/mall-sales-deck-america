@@ -130,7 +130,7 @@ const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
                             poster={mall.images.events}
                             className="absolute inset-0 h-full w-full object-cover"
                         >
-                            {/* <source src="/videos/events.mp4" type="video/mp4" /> */}
+                            <source src="/videos/events.mp4" type="video/mp4" />
                         </video>
 
                         <img

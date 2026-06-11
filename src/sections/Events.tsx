@@ -12,7 +12,7 @@ export function Events() {
           poster={mall.images.events}
           className="absolute inset-0 h-full w-full object-cover opacity-25"
         >
-          {/* <source src="/videos/events.mp4" type="video/mp4" /> */}
+          <source src="/videos/events.mp4" type="video/mp4" />
         </video>
         <img src={mall.images.events} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25 -z-10" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/85 to-ink" />

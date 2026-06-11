@@ -100,7 +100,7 @@ export function Sponsorship() {
           aria-hidden
           className="pointer-events-none absolute right-0 top-0 h-full w-1/3 object-cover opacity-10 mix-blend-luminosity"
         />
-            {/* <motion.div className="absolute inset-0">
+            <motion.div className="absolute inset-0">
               <video
                 autoPlay
                 muted
@@ -117,7 +117,7 @@ export function Sponsorship() {
                 alt="Dining"
                 className="absolute inset-0 h-full w-full object-cover -z-10"
               />
-            </motion.div> */}
+            </motion.div>
       </div>
       
     </section>
