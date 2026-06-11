@@ -63,7 +63,11 @@ const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
   console.log("Submit clicked");
 
-  const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+ const formData = new FormData(e.currentTarget);
+
+const data = Object.fromEntries(
+  Array.from(formData)
+);
 
   const parsed = eventsSchema.safeParse(data);
 

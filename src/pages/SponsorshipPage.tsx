@@ -1,4 +1,4 @@
-import {  Link } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
@@ -41,7 +41,12 @@ export function SponsorshipPage() {
 
     const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+
+        const formData = new FormData(e.currentTarget);
+
+        const data = Object.fromEntries(
+            Array.from(formData)
+        );
         const parsed = sponsorshipSchema.safeParse(data);
         if (!parsed.success) {
             const fe: FieldErrors = {};
@@ -140,8 +145,8 @@ export function SponsorshipPage() {
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1, duration: 0.6 }}
                                     className={`relative overflow-hidden rounded-2xl border p-8 ${t.featured
-                                            ? "border-gold/60 bg-gradient-to-b from-gold/10 to-card shadow-[0_30px_80px_-40px_var(--gold)]"
-                                            : "border-border bg-card/60"
+                                        ? "border-gold/60 bg-gradient-to-b from-gold/10 to-card shadow-[0_30px_80px_-40px_var(--gold)]"
+                                        : "border-border bg-card/60"
                                         }`}
                                 >
                                     {t.featured && (
